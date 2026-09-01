@@ -22,10 +22,10 @@ energy-webpage-v1/
 
 ## Pages
 
-- `index.html` — Home page shell, ready for future tutorial content.
-- `televisions.html` — Televisions page shell, ready for future tutorial content.
-- `about.html` — About Us page shell, ready for future tutorial content.
-- `calc.html` — Complete interactive appliance energy and cost calculator. this was optional.
+- `index.html` — Home page.
+- `televisions.html` — Televisions page.
+- `about.html` — About Us page.
+- `calc.html` — Complete interactive appliance energy and cost calculator, this was optional.
 
 ## Running the site
 
