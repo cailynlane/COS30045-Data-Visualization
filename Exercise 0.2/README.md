@@ -1,64 +1,47 @@
-# COS30045 – Data Visualisation  
-## Exercise 0.2 – Energy Website
+# WattWise Australia — Appliance Energy Consumption Website
 
-Welcome to **Exercise 0.2** for COS30045 Data Visualisation.
+A four-page educational website demonstrating semantic HTML, shared navigation, external CSS, vanilla JavaScript interactivity, responsive design, and client-side calculations.
 
-In this exercise, you will build a simple **Energy Data Webpage** using **HTML, CSS, and JavaScript**. The purpose of this exercise is to familiarise you with the development workflow using **GitHub and VS Code**, while preparing the foundation for future data visualisation tasks.
+## Required project structure
 
----
-
-# Objective
-
-The objectives of this exercise are:
-
-- Understand how to use **GitHub for version control**
-- Practice **web development structure**
-- Build a **basic website**
-- Maintain **regular commits**
-- Identify commits that include **GenAI-generated code**
-
----
-
-# Step 1 – Fork the Repository
-
-1. Open this repository.
-2. Click **Fork** at the top right of the page.
-3. This will create a copy of the repository in your GitHub account.
-
-Example:
-
-Original repository : "github.com/rishmaf/COS30045-Data-Visualization/energy-webpage"
-
-Your forked repository : "github.com/yourusername/COS30045-Data-Visualization/energy-webpage"
-
-
----
-
-# Step 2 – Clone the Repository
-
-Clone your forked repository to your local machine using **VS Code** or the terminal.
-
-
-
-# Step 3 – Project Structure
-
-
-Your project must follow the structure below.
-
-```bash
-energy-webpage-v1
-│
-├── css
+```text
+energy-webpage-v1/
+├── css/
 │   └── styles.css
-│
-├── js
+├── js/
 │   └── scripts.js
-│
-├── images
+├── images/
 │   └── PowerIcon.png
-│
-├── data
+├── data/
 │   └── data.csv
-│
 ├── index.html
+├── televisions.html
+├── about.html
+├── calc.html
 └── README.md
+```
+
+## Pages
+
+- `index.html` — Home page shell, ready for future tutorial content.
+- `televisions.html` — Televisions page shell, ready for future tutorial content.
+- `about.html` — About Us page shell, ready for future tutorial content.
+- `calc.html` — Complete interactive appliance energy and cost calculator.
+
+The Home, Televisions, and About Us pages intentionally contain only the shared navigation and footer so their content can be added during future tutorials. The calculator page has been left fully populated and unchanged.
+
+## Shared features
+
+The navigation appears on every page and includes the PowerIcon logo, links to all four pages, hover states, and an active-page indicator. The calculator validates user input and calculates daily energy consumption, monthly energy consumption, monthly cost, and yearly cost in the browser. `data/data.csv` contains example appliance wattage data for future use or extension.
+
+The visual design is inspired by **1992 retro-computing and early web culture**: CRT scanlines, pixel-style typography, chunky beveled controls, neon cyan, magenta, yellow and blue, arcade-like panels, and a dark computer-screen background.
+
+## Running the site
+
+Open `index.html` in a browser, or use the Live Server extension in Visual Studio Code. No external JavaScript libraries are required. An internet connection may be needed for the decorative Google Fonts import; the site remains usable if the fonts are unavailable.
+
+## Attribution
+
+Footer name: Cailyn Lanelle. GenAI acknowledgement: “GenAI was used”.
+
+> Note: The `images/PowerIcon.png` file included in this package is a temporary power-icon placeholder. Replace it with the provided course PNG while keeping the same filename and location.
