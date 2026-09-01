@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearly = daily * 365;
     const monthlyCost = (monthly * price) / 100;
     const yearlyCost = (yearly * price) / 100;
-    results.innerHTML = `<p class="eyebrow">YOUR ESTIMATE</p><h2>Here’s the energy story</h2><p>At ${hours} hour${hours === 1 ? '' : 's'} a day, this appliance could use:</p><div class="result-grid"><div class="result-item"><small>Daily energy</small><strong>${daily.toFixed(2)} kWh</strong></div><div class="result-item"><small>Monthly energy</small><strong>${monthly.toFixed(1)} kWh</strong></div><div class="result-item"><small>Monthly cost</small><strong>$${monthlyCost.toFixed(2)}</strong></div><div class="result-item"><small>Yearly cost</small><strong>$${yearlyCost.toFixed(2)}</strong></div></div>`;
+    results.innerHTML = `<p class="eyebrow">YOUR ESTIMATE</p><h2>ദ്ദി(⎚_⎚)</h2><p>At ${hours} hour${hours === 1 ? '' : 's'} a day, this appliance could use:</p><div class="result-grid"><div class="result-item"><small>Daily energy</small><strong>${daily.toFixed(2)} kWh</strong></div><div class="result-item"><small>Monthly energy</small><strong>${monthly.toFixed(1)} kWh</strong></div><div class="result-item"><small>Monthly cost</small><strong>$${monthlyCost.toFixed(2)}</strong></div><div class="result-item"><small>Yearly cost</small><strong>$${yearlyCost.toFixed(2)}</strong></div></div>`;
   });
 });
