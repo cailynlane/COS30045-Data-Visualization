@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Televisions | W</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="WattWise Australia home">
+        <img src="images/PowerIcon.png" alt="WattWise power logo">
+        <span>W<span class="brand-accent">AU</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="televisions.html">Televisions</a>
+        <a href="calc.html">Calculator</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero container story-intro">
+      <p class="eyebrow">TV ENERGY STORY</p>
+      <h1>What makes a TV power hungry?</h1>
+      <p class="lead">Two things stand out in the data: <strong>how big the screen is</strong> and <strong>what screen technology it uses</strong>. Here is what that means for your power bill.</p>
+    </section>
+
+    <section class="container story-section story-text">
+      <h2>Who is this for?</h2>
+      <p>This page is written for Australian households who are about to buy a new television and want to know which choices will cost more to run over the year.</p>
+      <p>Energy use is shown as the labelled energy consumption in kilowatt-hours per year (kWh/year), as published for each TV model in the dataset. Lower is cheaper to run.</p>
+    </section>
+
+    <section class="container story-section">
+      <div class="story-text">
+        <h2>1. Screen technology matters</h2>
+        <p>We grouped every TV in the dataset by screen technology and averaged their labelled yearly energy consumption.</p>
+      </div>
+
+      <figure class="figure-card">
+        <img src="images/screen-tech-bar-chart.png" alt="Bar chart of average labelled energy consumption in kWh per year by screen technology. LCD is about 335, LCD (LED) about 455 and OLED about 487.">
+        <figcaption>Figure 1: Average labelled energy consumption (kWh/year) by screen technology. Chart made in KNIME.</figcaption>
+      </figure>
+
+      <div class="takeaway story-text">
+        <p><strong>Key point:</strong> On average, OLED TVs use the most energy (about 487 kWh/year), LCD (LED) sits in the middle (about 455) and standard LCD uses the least (about 335).</p>
+        <p>Averages hide a lot though. A technology that uses more on average might still have efficient models, and these groups will contain different screen sizes (see the next chart).</p>
+      </div>
+    </section>
+
+    <section class="container story-section">
+      <div class="story-text">
+        <h2>2. Bigger screens use more energy</h2>
+        <p>Each dot below is one TV model. Screen sizes are rounded to the nearest inch band so models of similar size line up in columns.</p>
+      </div>
+
+      <figure class="figure-card">
+        <img src="images/screen-size-scatter-plot.png" alt="Scatter plot of screen size in inches against labelled energy consumption in kWh per year. Energy use rises with screen size and the spread between models becomes much wider above 60 inches.">
+        <figcaption>Figure 2: Screen size (inches, rounded) against labelled energy consumption (kWh/year). Chart made in KNIME.</figcaption>
+      </figure>
+
+      <div class="takeaway story-text">
+        <p><strong>Key point:</strong> Energy use climbs steadily with screen size. Small TVs (under 30 inches) mostly sit below about 150 kWh/year, while the biggest models can exceed 1,500.</p>
+        <p>The vertical spread also grows with size. Among TVs of the same size, yearly energy use can differ by several hundred kWh, so comparing the energy label on same-sized models is worth the effort.</p>
+      </div>
+    </section>
+
+    <section class="container story-section story-text">
+      <h2>What should you do?</h2>
+      <div class="tips">
+        <div class="tip"><span>01</span><p>Buy the smallest screen you will be happy with. Size is the biggest driver of energy use in this data.</p></div>
+        <div class="tip"><span>02</span><p>Compare labelled kWh/year between models of the <em>same</em> size and technology.</p></div>
+        <div class="tip"><span>03</span><p>Use the <a href="calc.html">calculator</a> to turn a TV's wattage and daily viewing hours into a running cost.</p></div>
+      </div>
+    </section>
+
+    <section class="container story-section story-text">
+      <h2>How we made these charts</h2>
+      <p>Both charts were produced in KNIME from the TV energy consumption dataset: columns were filtered, rows with missing screen technology were removed, and values were grouped (for the bar chart) or rounded (for the scatter plot).</p>
+      <details class="workflow-details">
+        <summary>Show the KNIME workflow</summary>
+        <figure class="figure-card">
+          <img src="images/knime-workflow.png" alt="KNIME workflow showing the Column Filter, GroupBy and Bar Chart nodes for the screen technology chart, and the Number Rounder and Scatter Plot nodes for the screen size chart.">
+          <figcaption>Figure 3: KNIME workflow. The top two branches create Figures 1 and 2.</figcaption>
+        </figure>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span class="current-year"></span> Cailyn Lanelle</span>
+      <span>GenAI was used</span>
+    </div>
+  </footer>
+</body>
+</html>
