@@ -1,14 +1,13 @@
-d3.select("p")
-  .style("color", "red");
+const svg = d3.select(".responsive-svg-container")
+  .append("svg")
+    .attr("viewBox", "0 0 1200 1600")
+    .style("border", "1px solid black");
 
-d3.select(".test-box")
-  .append("p")
-    .text("Purchasing a low energy consumption TV will help with your energy bills!");
-
-d3.select(".test-svg")
+// test rectangle (a long thin blue bar, hard coded)
+svg
   .append("rect")
-    .attr("x", 50)
-    .attr("y", 20)
-    .attr("width", 100)
-    .attr("height", 30)
-    .style("fill", "green");
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("width", 414)
+    .attr("height", 16)
+    .attr("fill", "blue");
