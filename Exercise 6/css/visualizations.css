@@ -1,0 +1,5 @@
+.responsive-svg-container { width: 100%; max-width: 1000px; margin: 0 auto 40px; }
+.responsive-svg-container svg { border: 1px solid #54e5dc; background: #101344; }
+.tick text { fill: white; font-size: 13px; }
+.tick line, .domain { stroke: white; }
+.axis-label { fill: white; font-size: 14px; }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Energy Explorer</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisation.css">
+</head>
+<body>
+  <main class="container">
+    <h1>TV energy consumption</h1>
+
+    <h2>Filters</h2>
+    <p>Choose a screen type and a screen size. Both charts update.</p>
+    <div id="filters_screen" class="filters"></div>
+    <div id="filters_size" class="filters"></div>
+    <div class="filters"><button id="rescale">Rescale axis: off</button></div>
+
+    <h2>How much energy do TVs use?</h2>
+    <p>Each bar counts the TV models in an energy band (kWh/year). Hover over a bar for details.</p>
+    <div id="histogram" class="responsive-svg-container"></div>
+
+    <h2>Do more stars mean less energy?</h2>
+    <p>Each dot is one TV model, coloured by screen type. Hover over a dot for details.</p>
+    <div id="scatterplot" class="responsive-svg-container"></div>
+  </main>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/histogram.js"></script>
+  <script src="js/scatterplot.js"></script>
+</body>
+</html>
