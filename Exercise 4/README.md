@@ -1,22 +1,33 @@
-# Exercise 4 – Introduction to D3.js
+# Exercise 4: Introduction to D3
 
-In this exercise, you will learn the basics of **D3.js**, a JavaScript library used to create interactive data visualisations on the web.
+Exercises 4.1 to 4.7. Exercise 4.1 (SVG house and garden) is in its own repository. This repository covers 4.2 to 4.7.
 
-The exercises in this folder guide you through the fundamental concepts needed to build visualisations using D3.
+## What I built
 
-## Exercises
+- **4.2:** used D3 to change a style, append a paragraph and append an SVG rectangle.
+- **4.3:** set up a responsive SVG canvas using a viewBox.
+- **4.4:** loaded TV brand counts from a CSV with d3.csv and converted the counts to numbers.
+- **4.5:** bound the data to rectangles to draw a basic bar chart.
+- **4.6:** added a linear scale (bar length) and a band scale (bar thickness and spacing).
+- **4.7:** grouped each bar with its label and added brand names and count values.
 
-- **Exercise 4.1 – Draw SVGs**  
-  Learn how to create SVG elements that are used to draw graphics on a webpage.
+The final chart is a horizontal bar chart of the number of TV models per brand.
 
-- **Exercise 4.3 – D3 setup**  
-  Set up the D3 library in your webpage.
+## Files
 
-- **Exercise 4.4 – Load data from CSV**  
-  Learn how to load and read data from a CSV file using D3.
+- televisions.html: page containing the chart
+- js/main.js: D3 code
+- css/styles.css: styles, including the responsive-svg-container class
+- data/tvBrandCount.csv: brand counts exported from KNIME
 
-- **Exercise 4.5 – D3 binding and drawing with data**  
-  Bind data to visual elements and draw graphics based on the data.
+## Running the project
 
-- **Exercise 4.6 – Scaling charts**  
-  Use D3 scales to map data values to positions in a chart.
+Open the project in VS Code and use the Live Server extension. The page must be served over http because D3 cannot load the CSV when opened as a file.
+
+## Data
+
+Brand counts were made in KNIME from the TV dataset using the provided workflow and exported with the CSV Writer. The CSV columns are Brand_Reg and Count(SoldIn), which the code maps to brand and count.
+
+## AI Declaration
+
+I used generative AI (Claude) for step-by-step guidance, to generate the starter SVG house and debug the D3 code. 
