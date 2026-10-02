@@ -1,104 +1,38 @@
-# Exercise 3 – Data Story: TV Energy Consumption
+# Exercise 3: Communicating Data Insights
 
-## Overview
-
-In this exercise, you will develop a **data story** based on the **TV Energy Consumption dataset**. Using the website created in **Exercise 0.2**, you will extend your work to present a meaningful narrative supported by data visualisations.
-
-Your goal is to communicate insights from the dataset in a clear and engaging way through your **website and written explanation**.
-
-You must use the **Exercise 3 folder in your existing forked repository** and reuse the files created in **Exercise 0.2**.
-
----
+A short data story about TV energy consumption, built as a webpage for Australian households.
 
 ## Data Story
 
-### Audience
+**Audience:** Australian households about to buy a new TV who want to keep running costs down. They are not data specialists, so the page uses plain language, two simple charts and short takeaways.
 
-The target audience for this visualisation includes:
+**What they want to know:**
+1. Does screen technology affect how much energy a TV uses?
+2. How much does screen size affect energy use?
+3. What can they do about it when choosing a TV?
 
-- Consumers interested in **energy-efficient televisions**
-- Policy makers and regulators interested in **energy consumption trends**
-- Researchers studying **energy efficiency in consumer electronics**
+**Story structure:**
+1. Bar chart: average yearly energy use by screen technology (LCD, LCD (LED), OLED).
+2. Scatter plot: screen size against yearly energy use.
+3. Practical tips and a link to the energy cost calculator.
 
-These audiences are interested in understanding how **television energy consumption varies across models, sizes, and technologies**, and how these factors influence overall energy usage.
+**Design choices:** each chart has a caption and a "Key point" box that states the finding in words. Charts have alt text for accessibility.
 
-### Story Overview
+## About the data
 
-This visualisation explores patterns in **TV energy consumption** across different television models and specifications.
+- **Data source:** TV energy consumption dataset supplied for COS30045 [add publisher, URL and download date].
+- **Data processing:** done in KNIME. Columns were filtered and rows with missing screen technology were removed. The bar chart uses a GroupBy node (mean energy consumption per screen technology). The scatter plot rounds screen size with a Number Rounder node.
+- **Privacy:** the dataset describes products, not people, and has no personal information.
+- **Accuracy and limitations:** energy figures are labelled values, not measured real-world use, which depends on settings, content and viewing hours. Averages hide variation within each group, and screen sizes differ between technologies, so the technology comparison is partly affected by size.
+- **Ethics:** the bar chart starts at zero so differences are not exaggerated. Findings are described as patterns in the data, not as claims that one technology is always better.
 
-The goal is to help viewers understand:
+## Pages
 
-- How energy consumption varies between television models
-- The relationship between **screen size and power consumption**
-- How **energy efficiency ratings** impact energy usage
-- Trends that may help consumers choose more **energy-efficient televisions**
-
-The website presents these insights through visualisations and explanatory text that guide the viewer through the data.
-
----
-
-## About the Data
-
-### Data Source
-
-The dataset used in this project contains information about **television models and their energy consumption characteristics**, including power usage, screen size, technology type, and efficiency ratings.
-
-The dataset was provided as part of the course materials.
-
-### Data Processing
-
-Before creating visualisations, the dataset was processed to ensure it was suitable for analysis. This included:
-
-- Cleaning missing or inconsistent values
-- Selecting relevant attributes for visualisation
-- Organising the data into formats suitable for web visualisation
-
-### Privacy
-
-The dataset does not contain any **personal or sensitive information**. It focuses solely on product specifications and energy consumption data related to television devices.
-
-### Accuracy and Limitations
-
-While the dataset provides useful information about TV energy consumption, there are some limitations:
-
-- The dataset may not include **all available television models**
-- Some information may be **outdated or incomplete**
-- Energy consumption may vary depending on **real-world usage conditions**
-
-These factors should be considered when interpreting the visualisations.
-
-### Ethics
-
-When presenting data visualisations, it is important to ensure that the information is represented **accurately and responsibly**.
-
-This project follows ethical data visualisation practices by:
-
-- Avoiding misleading visual representations
-- Clearly explaining the context of the data
-- Presenting information transparently so viewers can interpret the results correctly
-
----
+- index.html: Home
+- televisions.html: the data story
+- calc.html: appliance energy and cost calculator
+- about.html: About Us
 
 ## AI Declaration
 
-Artificial Intelligence (AI) tools may have been used to assist with aspects of this assignment, such as:
-
-- Generating example code
-- Improving code structure
-- Assisting with documentation writing
-
-All AI-generated assistance was reviewed, modified where necessary, and integrated responsibly into the project.
-
----
-
-## Website Storytelling
-
-The website has been updated to communicate a **data-driven story** based on the TV energy consumption dataset.
-
-The website includes:
-
-- Visualisations that present key insights from the dataset
-- Text explanations that help readers understand the meaning of the visualisations
-- Context that connects the data to real-world implications
-
-The aim is to guide the viewer through the data in a way that is **informative, engaging, and easy to understand**.
+I used generative AI (Claude) to help build the website layout, draft page text and write this README. The KNIME workflow and the two charts are my own work. I reviewed and edited all AI-generated content before using it.
