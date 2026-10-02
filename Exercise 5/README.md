@@ -1,53 +1,36 @@
-# Exercise 5 – Multi-Chart Webpage
+# Exercise 5: Chart Types in D3
 
-## Aim
-Create a variety of different chart types using **D3.js**.
+Three charts on one page (televisions.html), each with its own JavaScript file.
 
-## Purpose
-In previous exercises, we created simple charts such as a horizontal bar chart. In this exercise, you will extend your skills by building multiple chart types and presenting them on a webpage.
+## Charts
 
-This activity focuses on using **D3 to visualise different types of data** and understanding when different charts are appropriate.
+1. **Vertical bar chart** (js/bar_chart.js): average energy consumption of 55-inch TVs by screen type. LED averages about 369 kWh/year, OLED about 362 and LCD about 335.
+2. **Line chart with points** (js/line_chart.js): average Australian electricity spot price from 1998 to 2024, drawn first as a scatter plot and then connected with d3.line().
+3. **Donut chart** (js/donut_chart.js): number of small, medium and large TV models, made with d3.pie() and d3.arc().
 
-## Charts to Create
+## Techniques
 
-Using the provided **TV energy consumption dataset** (or your own dataset), your webpage must include the following chart types:
+- Margins and an inner chart group
+- Linear and band scales, plus an ordinal colour scale
+- Axes, axis labels and value labels
+- Line generator, pie and arc generators
 
-- **Scatter Plot**  
-  Energy consumption vs star rating.
+## Files
 
-- **Donut Chart**  
-  Energy consumption for different screen technologies across all TVs combined.
+- televisions.html
+- css/styles.css
+- js/bar_chart.js, js/line_chart.js, js/donut_chart.js
+- data/: CSV files for each chart (bar-data.csv, spot-prices.csv, size-counts.csv)
 
-- **Bar Chart**  
-  Energy consumption for different screen technologies for **55-inch TVs only**.
+## Data
 
-- **Line Chart**  
-  Spot power prices from **1998 to 2024** (either plot the average or include a line for each state).
+- Bar chart and donut chart: prepared in KNIME from the TV dataset (filter and GroupBy) and exported as CSV.
+- Line chart: ARE spot price data supplied with the unit [add source details if required].
 
-You may use the **provided datasets** or your **own dataset**, but your webpage must include **one example of each chart type**.
+## Running the project
 
-## Preparation
+Use Live Server in VS Code so the CSV files load.
 
-Before starting this exercise, it is recommended that you:
+## AI Declaration
 
-- Review this week's **lecture slides**
-- Review **Chapter 4 and Chapter 5 of Dufour and Meeks (2024)**
-
-## Instructions
-
-Use the **forked repository that you created earlier for this unit**.
-
-1. Open your existing **forked repository**.
-2. Navigate to the **Exercise 5 folder**.
-3. Add your code and files for this exercise inside that folder.
-4. Build a webpage that displays the required charts using **D3.js**.
-5. Commit and push your changes regularly to your GitHub repository.
-
-## Submission
-
-Your **forked repository** will serve as your submission.
-
-Ensure that:
-- All Exercise 5 files are inside the **Exercise 5 folder**
-- Your code is pushed to GitHub
-- Your repository link is submitted through the submission system.
+I used generative AI (Claude) for guidance and debug the chart code. 
