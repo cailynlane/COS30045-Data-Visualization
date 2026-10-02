@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+    --navy: #101344;
+    --blue: #2937a7;
+    --cyan: #54e5dc;
+    --pink: #ff4fb3;
+    --yellow: #fff36b;
+    --white: #f5f4df;
+    --ink: #101344;
+    --purple: #7428a8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #090b29;
+}
+
+body {
+    margin: 0;
+    color: var(--white);
+    font-family: 'VT323', monospace;
+    font-size: 21px;
+    line-height: 1.25;
+    background: radial-gradient(ellipse at center, #20266b 0, #101344 65%, #090b29 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .1;
+    background: repeating-linear-gradient(0deg, transparent 0, transparent 3px, #000 4px, #000 5px);
+    z-index: 20;
+}
+
+h1, h2, h3, .brand, .nav-links, .button, .eyebrow, th, label {
+    font-family: 'Press Start 2P', monospace;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: var(--yellow);
+    text-shadow: 5px 5px var(--pink), 9px 9px #000;
+    letter-spacing: .02em;
+    margin: 0 0 25px;
+}
+
+h2 {
+    font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+    color: var(--cyan);
+    text-shadow: 3px 3px #000;
+    margin: 0 0 18px;
+}
+
+h3 {
+    font-size: .85rem;
+    color: var(--yellow);
+    margin: 0 0 12px;
+}
+
+p {
+    margin: 0 0 18px;
+    color: var(--white);
+}
+
+a {
+    color: var(--cyan);
+}
+
+.container {
+    width: min(1120px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #111747;
+    border-bottom: 5px solid var(--pink);
+    box-shadow: 0 4px 0 #000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: .95rem;
+    text-shadow: 3px 3px #000;
+}
+
+.brand img {
+    width: 46px;
+    height: 46px;
+    image-rendering: pixelated;
+    border: 3px solid var(--cyan);
+    background: var(--pink);
+}
+
+.brand-accent {
+    color: var(--cyan);
+}
+
+.nav-links {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    font-size: .6rem;
+    text-decoration: none;
+    color: var(--white);
+    padding: 11px 12px;
+    border: 3px outset #7780df;
+    background: var(--blue);
+    text-shadow: 2px 2px #000;
+}
+
+.nav-links a:hover {
+    color: var(--navy);
+    background: var(--yellow);
+    text-shadow: none;
+}
+
+.nav-links a.active {
+    color: var(--navy);
+    background: var(--cyan);
+    border-style: inset;
+    text-shadow: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hero {
+    min-height: 610px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 0;
+}
+
+.eyebrow {
+    font-size: .58rem;
+    color: var(--pink);
+    letter-spacing: .05em;
+    margin-bottom: 18px;
+}
+
+.lead {
+    font-size: 1.45rem;
+    max-width: 610px;
+    color: #d8d9ff;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.button-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: .64rem;
+    padding: 15px 17px;
+    border: 4px outset #a8b5ff;
+    background: var(--pink);
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--yellow);
+    color: var(--navy);
+    text-shadow: none;
+}
+
+.button-ghost {
+    background: var(--purple);
+}
+
+.hero-art {
+    height: 360px;
+    border: 7px solid var(--cyan);
+    background: #17194e;
+    box-shadow: 10px 10px 0 #000, inset 0 0 0 5px var(--pink);
+    position: relative;
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: var(--yellow);
+    right: 14%;
+    top: 12%;
+    box-shadow: 0 0 0 7px var(--pink);
+}
+
+.spark {
+    position: absolute;
+    color: var(--cyan);
+    font-size: 38px;
+}
+
+.spark-one {
+    left: 12%;
+    top: 20%;
+}
+
+.spark-two {
+    right: 10%;
+    top: 50%;
+}
+
+.house {
+    position: absolute;
+    background: var(--pink);
+    width: 230px;
+    height: 155px;
+    left: 50%;
+    bottom: 62px;
+    transform: translateX(-50%);
+    border: 5px solid #000;
+}
+
+.roof {
+    position: absolute;
+    width: 178px;
+    height: 178px;
+    background: var(--purple);
+    transform: rotate(45deg);
+    left: 21px;
+    top: -91px;
+    border: 5px solid #000;
+    z-index: -1;
+}
+
+.window {
+    position: absolute;
+    width: 45px;
+    height: 48px;
+    background: var(--cyan);
+    top: 39px;
+    border: 6px solid #000;
+}
+
+.window-left {
+    left: 22px;
+}
+
+.window-right {
+    right: 22px;
+}
+
+.door {
+    position: absolute;
+    width: 45px;
+    height: 76px;
+    background: var(--yellow);
+    bottom: 0;
+    left: 87px;
+    border: 5px solid #000;
+}
+
+.ground {
+    height: 17px;
+    background: var(--cyan);
+    position: absolute;
+    bottom: 40px;
+    left: 13%;
+    right: 13%;
+    border: 4px solid #000;
+}
+
+.section-soft {
+    background: #1a1d57;
+    border-top: 5px dashed var(--yellow);
+    border-bottom: 5px dashed var(--yellow);
+    padding: 74px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.section-heading > p {
+    max-width: 380px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.stat-card, .feature-panel, .calculator-card, .results-card, .values-card {
+    background: #292e83;
+    border: 5px solid var(--cyan);
+    box-shadow: 7px 7px 0 #000;
+    padding: 25px;
+}
+
+.stat-card:nth-child(2) {
+    border-color: var(--pink);
+}
+
+.stat-card:nth-child(3) {
+    border-color: var(--yellow);
+}
+
+.stat-icon {
+    display: block;
+    color: var(--yellow);
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.stat-card strong {
+    font-family: 'Press Start 2P';
+    color: var(--yellow);
+    font-size: .72rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.faq-section {
+    padding: 76px 0;
+}
+
+.faq-list {
+    max-width: 800px;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background: #292e83;
+    border: 4px outset #7b87ec;
+    color: var(--white);
+    padding: 17px 18px;
+    margin-top: 10px;
+    font: 1.35rem 'VT323';
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    color: var(--yellow);
+}
+
+.faq-question span {
+    font: 1.3rem 'Press Start 2P';
+    color: var(--pink);
+}
+
+.faq-question[aria-expanded=true] {
+    background: var(--purple);
+    border-style: inset;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px 22px;
+    background: #17194e;
+    border: 3px solid var(--cyan);
+    border-top: 0;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+.page-hero {
+    padding: 75px 0 50px;
+}
+
+.content-grid, .calculator-layout, .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-bottom: 85px;
+}
+
+.tv-illustration {
+    height: 240px;
+    background: #111344;
+    border: 4px solid var(--pink);
+    margin-bottom: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.tv-screen {
+    width: 260px;
+    height: 140px;
+    background: #050719;
+    border: 10px ridge #6f77db;
+    border-radius: 25px;
+    color: var(--cyan);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: .8rem;
+    text-shadow: 3px 3px var(--pink);
+}
+
+.tv-screen b {
+    color: var(--yellow);
+}
+
+.tv-stand {
+    position: absolute;
+    margin-top: 180px;
+    width: 100px;
+    height: 13px;
+    background: var(--pink);
+    border: 3px solid #000;
+}
+
+.tips {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tip {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #292e83;
+    border: 4px outset #7b87ec;
+}
+
+.tip > span {
+    font-family: 'Press Start 2P';
+    color: var(--pink);
+    font-size: .75rem;
+}
+
+.tip p {
+    margin: 0;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #17194e;
+    border: 5px solid var(--cyan);
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+    border: 2px solid #6068bd;
+}
+
+th {
+    font-size: .55rem;
+    color: var(--yellow);
+    background: var(--purple);
+}
+
+td {
+    color: var(--white);
+}
+
+.calculator-layout {
+    grid-template-columns: .8fr 1.2fr;
+}
+
+.calculator-card {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.calculator-card h2 {
+    margin-bottom: 10px;
+}
+
+.calculator-card label {
+    font-size: .57rem;
+    color: var(--yellow);
+}
+
+input {
+    width: 100%;
+    border: 4px inset #7580df;
+    padding: 13px;
+    background: #060821;
+    color: var(--cyan);
+    font: 1.4rem 'VT323';
+    margin-bottom: 8px;
+}
+
+input:focus {
+    outline: 3px solid var(--pink);
+}
+
+.results-card {
+    background: #17194e;
+}
+
+.results-card p {
+    color: #d8d9ff;
+}
+
+.results-card .eyebrow {
+    color: var(--yellow);
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.result-item {
+    background: #292e83;
+    border: 3px solid var(--pink);
+    padding: 16px;
+}
+
+.result-item small {
+    display: block;
+    color: var(--cyan);
+    margin-bottom: 5px;
+}
+
+.result-item strong {
+    font: 1.8rem 'VT323';
+    color: var(--yellow);
+}
+
+.error {
+    color: var(--yellow) !important;
+    background: #6f164e;
+    padding: 12px;
+    border: 3px dashed var(--yellow);
+}
+
+.note {
+    padding: 0 0 80px;
+    color: #d8d9ff;
+}
+
+.note strong {
+    color: var(--yellow);
+}
+
+.about-grid {
+    padding-bottom: 100px;
+}
+
+.about-grid > div:first-child {
+    padding: 20px 0;
+}
+
+.values-card {
+    background: #7428a8;
+    border-color: var(--yellow);
+}
+
+.values-card .eyebrow {
+    color: var(--cyan);
+}
+
+.value {
+    padding: 17px 0;
+    border-top: 2px dashed var(--cyan);
+}
+
+.value b {
+    font-family: 'Press Start 2P';
+    font-size: .7rem;
+    color: var(--yellow);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.value span {
+    color: #fff;
+}
+
+.footer {
+    background: #080a24;
+    border-top: 6px solid var(--cyan);
+    box-shadow: 0 -5px 0 #000;
+}
+
+.footer-inner {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+.footer-inner span {
+    color: #d8d9ff;
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: calc(100% - 26px);
+    }
+
+    .nav {
+        min-height: 72px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: .48rem;
+        padding: 8px 7px;
+    }
+
+    .brand {
+        font-size: .7rem;
+    }
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 0;
+        min-height: auto;
+    }
+
+    .hero-art {
+        height: 275px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 13px;
+    }
+
+    .stat-grid, .content-grid, .calculator-layout, .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 54px 0 38px;
+    }
+
+    .footer-inner {
+        padding: 19px 0;
+        display: block;
+    }
+
+    .footer-inner span {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* chart styles (outside the media query so they apply on all screens) */
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}
+.tick text { fill: white; font-size: 14px; }
+.tick line, .domain { stroke: white; }
+.axis-label { fill: white; font-size: 14px; }
