@@ -1,65 +1,37 @@
-# Exercise 6 – Interactive Visualisations
+# Exercise 6: Interactive TV Energy Explorer
 
-## Overview
-In this exercise you will build **interactive data visualisations using D3.js**. Interaction allows users to explore the data and gain deeper insights through features such as filtering and tooltips.
+An interactive page with a histogram and a scatterplot of TV energy consumption.
 
-Use the **same repository you forked earlier for this unit** and complete this exercise inside the **Exercise 6 folder**.
+## Features
 
----
+- **Histogram:** number of TV models in 150 kWh/year bands (0 to 1800). The one extreme TV above 1800 kWh/year is excluded.
+- **Filters:** buttons for screen type (LCD, LED, OLED) and screen size (24, 32, 55, 65, 98 inch). Both charts update with animated transitions.
+- **Rescale axis button:** switches the histogram y axis between fixed (bars comparable across filters) and rescaled (small groups easier to read).
+- **Scatterplot:** star rating against energy consumption, coloured by screen type, with a legend.
+- **Tooltips:** hovering a dot shows brand, model, screen size and type. Hovering a histogram bar shows its energy range and number of models.
 
-## Exercise 6.1 – Interactive Histogram: Filtering
+## Files
 
-### Aim
-Build a histogram and add **interactive filters**.
+- index.html
+- css/base.css, css/visualisation.css
+- js/load-data.js: loads and types the data
+- js/shared-constants.js: dimensions, colours, scales, bin generator, filter lists
+- js/histogram.js, js/scatterplot.js: chart drawing
+- js/interactions.js: filters, rescaling and tooltips
+- data/tv-data.csv: Ex6_TVdata_withStar.csv from the unit
 
-### Purpose
-Interaction is one of the key advantages of visualisations on the web. In this exercise you will build a **histogram using the TV dataset** and allow users to filter the data.
+## Data
 
-Users should be able to explore energy consumption for different TV screen technologies such as:
+The Jan 2026 TV dataset prepared in KNIME (cleaned, with star ratings). Columns used: brand, model, screen technology, screen size, star rating and energy consumption (kWh/year).
 
-- LCD
-- LED
-- OLED
+## Limitations
 
-### Preparation
-Before starting, review:
+Energy values are labelled figures, not measured use. The scatterplot is densely packed, so overlapping dots hide some models. Fixed histogram bins mean the one extreme value is not shown.
 
-- This week's lecture slides
-- **Chapter 7 of Dufour and Meeks (2024)**
+## Running the project
 
----
+Open the folder in VS Code and use Live Server.
 
-## Exercise 6.2 – Interactive Scatterplot: Tooltips
+## AI Declaration
 
-### Aim
-Build a scatterplot and add **tooltips and colour coding**.
-
-### Purpose
-Tooltips are one of the most common interactive features in data visualisations. In this exercise you will create a **scatterplot using the TV dataset**.
-
-The chart should allow users to explore the relationship between:
-
-- Energy consumption
-- Star rating
-- Screen size
-- Screen technology
-
-Tooltips should display additional information such as **screen size**, and colours should represent **screen type**.
-
-### Preparation
-Before starting, review:
-
-- This week's lecture slides
-- **Chapter 7 of Dufour and Meeks (2024)**
-
----
-
-## Instructions
-
-1. Open your **existing forked repository**.
-2. Navigate to the **Exercise 6 folder**.
-3. Add the files needed to implement the histogram and scatterplot.
-4. Implement the required interactive features using **D3.js**.
-5. Commit and push your changes regularly to GitHub.
-
-Your forked repository will serve as your **submission record**.
+I used generative AI (Claude) to help with writing segments and debugging the D3 code for the histogram, filters, scatterplot and tooltips, and debug errors. 
