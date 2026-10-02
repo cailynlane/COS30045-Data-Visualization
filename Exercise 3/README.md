@@ -35,4 +35,4 @@ A short data story about TV energy consumption, built as a webpage for Australia
 
 ## AI Declaration
 
-I used generative AI (Claude) to help build the website layout, draft page text and write this README. The KNIME workflow and the two charts are my own work. I reviewed and edited all AI-generated content before using it.
+I used generative AI (Claude) to help build the website layout. The KNIME workflow and the two charts are my own work. I reviewed and edited all AI-generated content before using it.
